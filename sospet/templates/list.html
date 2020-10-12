@@ -1,0 +1,36 @@
+{% extends "model-page.html" %}
+
+{% block style %} 
+<style>
+   .polaroid{
+       width: 250px;
+       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
+       text-align: center;
+   } 
+
+   .container{
+       padding: 10px;
+   }
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="container" mb-4>
+        <div class="row">
+            {% for p in pet %}
+            <div class="col-sm-4">
+                <div class="polaroid">
+                    <a href='/pet/detail/{{p.id}}' >
+                      <img src="{{p.photo.url}}" style="width:100%">
+                    </a>
+                    <div class="container">
+                        {{ p.city }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
