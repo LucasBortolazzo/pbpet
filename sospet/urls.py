@@ -32,8 +32,4 @@ urlpatterns = [
     path('pet/register/submit/', views.set_pet),
     path('pet/delete/<id>/', views.delete_pet),
     path('', RedirectView.as_view(url="pet/all")),    
-]
-
-urlpatterns += staticfiles_urlpatterns()
-
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
