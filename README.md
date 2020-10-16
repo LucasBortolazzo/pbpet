@@ -1,4 +1,4 @@
-# SOS PET - Plataforma de adoção de Pets
+# SOS PET
 
 Plataforma para adoção de Pets. Desenvolvido com Python e Django.
 
